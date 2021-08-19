@@ -34,19 +34,15 @@ For example, for windows, the assembly command for me looked like this:
 pyinstaller Feodora_ru.py --noconsole --onefile --icon=icon.ico
 ```
 
-
-
 ### Copyrights and Licenses
 Not for commercial use.
 
 © 2021  [Mons](https://blog.mons.ws)
 
-### You may also be interested in the Dark version
-> Так же вас возможно заинтересует темная вариант
+### Special thanks
+> Отдельная благодарность  
 
-[Dark version Light and minimalistic free Wordpress theme.](https://github.com/blyamur/Montgo-Dark)
-
-> [Темная версия Легкой и минималистичная  бесплатной Wordpress темы.](https://github.com/blyamur/Montgo-Dark)
+[rdbende](https://github.com/rdbende/Sun-Valley-ttk-theme) and his ttk Theme .
 
 ### Did you find this useful?!
 > Вы нашли это  полезным ?!
