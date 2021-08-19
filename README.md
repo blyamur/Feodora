@@ -1,7 +1,8 @@
 # Feodora
-Script for resaving images with GUI  V3 (python 3 and tkinter)
 
 
+Feodora - Script for resaving images with GUI  V3 (python 3 and tkinter)
+> Феодора - Скрипт для пересохранения изображений с графическим интерфейсом (python 3 и tkinter)
 
 
 ![Light screenshot](https://github.com/blyamur/Feodora/blob/main/ezgif-2-0b191cd9961c.png)
