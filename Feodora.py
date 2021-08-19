@@ -18,7 +18,7 @@ __maintainer__ = "Mons"
 __email__ = "mons@mons.ws"
 __status__ = "Production"
 
-Image.MAX_IMAGE_PIXELS = None #отключение окграничений по размеры изображения
+Image.MAX_IMAGE_PIXELS = None #отключение ограничений по размеру изображения
 
 class App(ttk.Frame):
 	def __init__(self, parent):
@@ -137,7 +137,7 @@ if __name__ == "__main__":
 	h = h - 200
 	root.geometry('520x250+{}+{}'.format(w, h)) #размеры окна
 	root.resizable(False, False)
-	root.title("Феодора: Пересохранялка 3.1") # заголовок окна приложения
+	root.title("Феодора: Скрипт для пересохранения изображений 3.1") # заголовок окна приложения
 	root.iconbitmap('icon.ico') # иконка окна приложения
 	factor = 1.8 #степень улучшения изображения
 	new = 1
