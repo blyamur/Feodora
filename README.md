@@ -15,7 +15,7 @@ You can make your own version of the application by taking a script with the sou
 
 > Вы можете сделать свой вариант приложения, взяв с Github python скрипт с исходным кодом (писалось под версию Python 3.8), необходимые исходники иконки в формате .PNG и готовый файл иконки в формате .ICO. Все это можно отредактировать, что-то убрать или дописать свой функционал и при желании через pyinstaller собрать в один файл, предварительно распаковав все содержимое архива в одну папку (например Feodora_(язык)).
 
-##### Feodora_en.py - English version |  Feodora_ru.py  - Русская версия
+#### Feodora_en.py - English version |  Feodora_ru.py  - Русская версия
 
 For example, for windows, the assembly command for me looked like this:
 > Например для windows команда на сборку у меня выглядела так:
