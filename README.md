@@ -5,12 +5,13 @@ Feodora - Script for resaving images with GUI  V3 (python 3 and tkinter)
 > Феодора - Скрипт для пересохранения изображений с графическим интерфейсом (python 3 и tkinter)
 
 
-Simple to use. We turned on the options we needed, pressed the image selection button, selected all those images that need to be saved and are waiting for the end of the work. The finished images are in the same place as the originals.
-
-> Пользоваться просто. Включили нужные нам опции, нажали кнопку выбора изображений, выбрали все те изображения, которые необходимо пересохранить и ждем окончания работы. Готовые изображения там же, где и оригиналы.
 
 ![Light screenshot](https://github.com/blyamur/Feodora/blob/main/ezgif-2-0b191cd9961c.png)
 
+Simple to use. We turned on the options we needed, pressed the image selection button, selected all those images that need to be saved and are waiting for the end of the work. The finished images are in the same place as the originals.
+
+> Пользоваться просто. Включили нужные нам опции, нажали кнопку выбора изображений, выбрали все те изображения, которые необходимо пересохранить и ждем окончания работы. Готовые изображения там же, где и оригиналы.
+> 
 ![Light screenshot](https://github.com/blyamur/Feodora/blob/main/ezgif-2-0b191cd9961c.gif)
 
 The first photo is the original, then the photo after resaving with compression, the photo with compression and enhancement, and in the last version, only the enhancement option is enabled. The first two results are smaller than the original, somewhere much smaller, somewhere the difference is almost imperceptible. Visually, there is practically no difference between the original and the saved versions.
