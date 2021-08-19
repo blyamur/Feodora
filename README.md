@@ -38,10 +38,14 @@ Inside, the following process takes place: the program makes a copy of the file,
 You can make your own version of the application by taking a script with the source code from Github python (it was written for Python 3.8), the necessary sources of the icon in the .PNG format and the finished icon file in the .ICO format. All this can be edited, removed or added to its functionality and, if desired, through pyinstaller, compile into one file, after unpacking all the contents of the archive into one folder (for example, Feodora_(lang)).
 > Вы можете сделать свой вариант приложения, взяв с Github python скрипт с исходным кодом (писалось под версию Python 3.8), необходимые исходники иконки в формате .PNG и готовый файл иконки в формате .ICO. Все это можно отредактировать, что-то убрать или дописать свой функционал и при желании через pyinstaller собрать в один файл, предварительно распаковав все содержимое архива в одну папку (например Feodora_(язык)).
 
+
+For convenience, two versions have been made:
+> Для удобства сделаны две версии: 
+
 #### Feodora_en.py - English version |  Feodora_ru.py  - Русская версия
 
-For example, for windows, the assembly command for me looked like this:
-> Например для windows команда на сборку у меня выглядела так:
+You need to download the version of the script you need, the icon, the theme file and the folder with the theme design. Then it only remains to run the script on the PC if you have Python 3 installed or build it into an executable file through pyinstaller. For example, for windows, the assembly command for me looked like this:
+> Необходимо скачать нужную вам версию скрипта, иконку, файл темы и папку с оформлением темы. Далее останется только запустить скрипт на пк, если у вас установлен Python 3 или через pyinstaller собрать в исполняемый файл. Например для windows команда на сборку у меня выглядела так:
 
 ``` 
 pyinstaller Feodora_ru.py --noconsole --onefile --icon=icon.ico
