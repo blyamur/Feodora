@@ -4,9 +4,19 @@
 Feodora - Script for resaving images with GUI  V3 (python 3 and tkinter)
 > Феодора - Скрипт для пересохранения изображений с графическим интерфейсом (python 3 и tkinter)
 
-
-
 ![Light screenshot](https://github.com/blyamur/Feodora/blob/main/ezgif-2-0b191cd9961c.png)
+
+A small development of the script / program, which was laid out [earlier](https://github.com/blyamur/Python-Resaving-Image-with-GUI).
+
+For general convenience and expansion of capabilities, some optional features have been added. For example, now you can select several images at once. Added the ability to compress images by lowering the quality when saving, taking into account the conversion process first into the .BMP format, which itself is quite weighty in volume, and then into the original format, such compression is sometimes necessary.
+
+Also added the ability to enable or disable image enhancement by increasing contrast and sharpness. Well, in order not to produce a bunch of files, you can now enable overwriting of originals with new files. And the names of new files are now without random symbols, but with the addition of the work done, if compression was added "compressed", if improved "enhance". Well, what is not unimportant, the interface has become somewhat more modern. A general list of features will be below.
+
+
+> Небольшое развитие скрипта\программы, который выкладывался ранее.
+> Для общего удобства и расширения возможностей добавлены некоторые опциональные возможности. Например теперь можно выбрать сразу несколько изображений сразу. Добавлена возможность сжатия изображений за счет понижения качества при сохранении, учитывая процесс конвертации сначала в формат .BMP, который сам по себе довольно весомый по объему, а потом уже в исходный формат, такое сжатие бывает необходимо.
+> Так же добавлена возможность включать или выключать улучшение изображения, за счет повышения контрастности и резкости. Ну и чтобы не плодить кучу файлов, теперь можно включить перезапись оригиналов новыми файлами. А названия новых файлов теперь без рандомным символов, но с добавлением проделанной работы, если было сжатие будет добавлено «compressed«, если улучшено «enhance«. Ну что не маловажно, интерфейс стал несколько более современным. Общий список возможностей будет ниже.
+
 
 Simple to use. We turned on the options we needed, pressed the image selection button, selected all those images that need to be saved and are waiting for the end of the work. The finished images are in the same place as the originals.
 
@@ -20,9 +30,12 @@ The first photo is the original, then the photo after resaving with compression,
 
 ![Light screenshot](https://github.com/blyamur/Feodora/blob/main/process_il_cat-1280x599.jpg)
 
+In the latter case, the file size even increased by an order of magnitude, this is due to the fact that the amount of information in the image itself increased after increasing the contrast and sharpness. This enhancement parameter, like the compression parameter, can be changed as needed in the script (line 106 and line 141).
+
+> В последнем случае размер файла даже вырос на порядок, это связано с тем, что увеличилось количество информации в самом изображении после повышения контрастности и резкости. Этот параметр улучшения, как и параметр сжатия, при необходимости можно изменить в скрипте (строка 106 и строка 141).
+
 
 You can make your own version of the application by taking a script with the source code from Github python (it was written for Python 3.8), the necessary sources of the icon in the .PNG format and the finished icon file in the .ICO format. All this can be edited, removed or added to its functionality and, if desired, through pyinstaller, compile into one file, after unpacking all the contents of the archive into one folder (for example, Feodora_(lang)).
-
 > Вы можете сделать свой вариант приложения, взяв с Github python скрипт с исходным кодом (писалось под версию Python 3.8), необходимые исходники иконки в формате .PNG и готовый файл иконки в формате .ICO. Все это можно отредактировать, что-то убрать или дописать свой функционал и при желании через pyinstaller собрать в один файл, предварительно распаковав все содержимое архива в одну папку (например Feodora_(язык)).
 
 #### Feodora_en.py - English version |  Feodora_ru.py  - Русская версия
