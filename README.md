@@ -19,20 +19,20 @@ Also added the ability to enable or disable image enhancement by increasing cont
 
 
 Simple to use. We turned on the options we needed, pressed the image selection button, selected all those images that need to be saved and are waiting for the end of the work. The finished images are in the same place as the originals.
-
-> Пользоваться просто. Включили нужные нам опции, нажали кнопку выбора изображений, выбрали все те изображения, которые необходимо пересохранить и ждем окончания работы. Готовые изображения там же, где и оригиналы.
+> Пользоваться просто. Включили нужные нам опции, нажали кнопку выбора изображений, выбрали все те изображения, которые необходимо пересохранить и ждем окончания работы. Готовые изображения там же, где и оригиналы. 
 > 
 ![Light screenshot](https://github.com/blyamur/Feodora/blob/main/ezgif-2-0b191cd9961c.gif)
 
 The first photo is the original, then the photo after resaving with compression, the photo with compression and enhancement, and in the last version, only the enhancement option is enabled. The first two results are smaller than the original, somewhere much smaller, somewhere the difference is almost imperceptible. Visually, there is practically no difference between the original and the saved versions.
-
 > Первое фото-оригинал, далее фотография после пересохранения с сжатием, фотография с сжатием и улучшением и в последнем варианте включена только опция улучшения. Первые два результата имеют размер меньше оригинала, где-то существенно меньше, где-то разница практически незаметна. Визуально практически не видно разницы между оригиналом и сохраненными вариантами.
 
 ![Light screenshot](https://github.com/blyamur/Feodora/blob/main/process_il_cat-1280x599.jpg)
 
 In the latter case, the file size even increased by an order of magnitude, this is due to the fact that the amount of information in the image itself increased after increasing the contrast and sharpness. This enhancement parameter, like the compression parameter, can be changed as needed in the script (line 106 and line 141).
-
 > В последнем случае размер файла даже вырос на порядок, это связано с тем, что увеличилось количество информации в самом изображении после повышения контрастности и резкости. Этот параметр улучшения, как и параметр сжатия, при необходимости можно изменить в скрипте (строка 106 и строка 141).
+
+Inside, the following process takes place: the program makes a copy of the file, while saving it in .bmp, then opens only the created .bmp file and simply renames it to the format that was previously.
+> Внутри происходит следующий процесс: программа делает копию файла, при этом сохраняя его в .bmp, затем открывает только созданный .bmp файл и просто переименовывает в тот формат, который был ранее. 
 
 
 You can make your own version of the application by taking a script with the source code from Github python (it was written for Python 3.8), the necessary sources of the icon in the .PNG format and the finished icon file in the .ICO format. All this can be edited, removed or added to its functionality and, if desired, through pyinstaller, compile into one file, after unpacking all the contents of the archive into one folder (for example, Feodora_(lang)).
