@@ -59,7 +59,7 @@ Not for commercial use.
 ### Special thanks
 > Отдельная благодарность  
 
-[rdbende](https://github.com/rdbende/Sun-Valley-ttk-theme) and his ttk Theme .
+[rdbende](https://github.com/rdbende/Sun-Valley-ttk-theme) and his ttk Theme Sun-Valley-ttk-theme, based on which the current [Theme](https://github.com/blyamur/Spring-Noon-ttk-theme) was made.
 
 ### Did you find this useful?!
 > Вы нашли это  полезным ?!
