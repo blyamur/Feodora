@@ -98,7 +98,6 @@ def checkUpdate(method='Button'):
 			try:
 				index = github_page_html.index(('3.' + str(i)))
 				version = github_page_html[index]
-				print(version)
 			except ValueError:
 				pass
 			# display popup window if update found
