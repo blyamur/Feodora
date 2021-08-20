@@ -21,8 +21,8 @@ The first photo is the original, then the photo after resaving with compression,
 
 ![Light screenshot](https://github.com/blyamur/Feodora/blob/main/process_il_cat-1280x599.jpg)
 
-In the latter case, the file size even increased by an order of magnitude, this is due to the fact that the amount of information in the image itself increased after increasing the contrast and sharpness. This enhancement parameter, like the compression parameter, can be changed as needed in the script (line 106 and line 141).
-> В последнем случае размер файла даже вырос на порядок, это связано с тем, что увеличилось количество информации в самом изображении после повышения контрастности и резкости. Этот параметр улучшения, как и параметр сжатия, при необходимости можно изменить в скрипте (строка 106 и строка 141).
+In the latter case, the file size even increased by an order of magnitude, this is due to the fact that the amount of information in the image itself increased after increasing the contrast and sharpness. This enhancement parameter, like the compression parameter, can be changed as needed in the script (line 143 and line 179).
+> В последнем случае размер файла даже вырос на порядок, это связано с тем, что увеличилось количество информации в самом изображении после повышения контрастности и резкости. Этот параметр улучшения, как и параметр сжатия, при необходимости можно изменить в скрипте (строка 143 и строка 179).
 
 Inside, the following process takes place: the program makes a copy of the file, while saving it in .bmp, then opens only the created .bmp file and simply renames it to the format that was previously.
 > Внутри происходит следующий процесс: программа делает копию файла, при этом сохраняя его в .bmp, затем открывает только созданный .bmp файл и просто переименовывает в тот формат, который был ранее. 
