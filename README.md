@@ -65,19 +65,23 @@ The performance was tested on Windows 7-10 | Работоспособность 
 #### What's new in version 3.1  | Что нового в версии 3.1
 
 - New visual design based on TTK theme Spring-Noon
-> - Новое визуальное оформление на базе TTK темы Spring-Noon
 - Animation when enabling / disabling options
-> - - Анимация при включении \ отключении опций
 - Ability to enable replacement of original images with resaved ones
-> - - - Возможность включить замену оригиналов изображений, пересохраненными
 - Ability to enable Image Compression
-> - - - - Возможность включить Сжатие изображений
 - Ability to enable Image Enhancement
-> - - - - - Возможность включить Улучшение изображений
 - Multi-selection, the ability to process multiple images at once
-> - Мультивыбор,возможность обработки сразу нескольких изображений
 - Check for updates
-> - Проверка наличия обновлений
+
+#### Что нового в версии 3.1
+
+- Новое визуальное оформление на базе TTK темы Spring-Noon
+- Анимация при включении \ отключении опций
+- Возможность включить замену оригиналов изображений, пересохраненными
+- Возможность включить Сжатие изображений
+- Возможность включить Сжатие изображений
+- Возможность включить Улучшение изображений
+- Мультивыбор,возможность обработки сразу нескольких изображений
+- Проверка наличия обновлений
 
 
 
