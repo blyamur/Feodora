@@ -55,9 +55,9 @@ pyinstaller Feodora_ru.py --noconsole --onefile --icon=icon.ico
 
 #### Download programs in EXE | Скачать программы в EXE 
 
-[Feodora__RU](https://3le.ru/aNQkwO)  - 12 Mb ZIP  From the author's server through the short link service
+[Feodora__RU](https://3le.ru/aNQkwO)  - 14 Mb ZIP  From the author's server through the short link service
 
-[Feodora_EN](https://3le.ru/RREe)  - 12 Мб Mb ZIP  From the author's server through the short link service
+[Feodora_EN](https://3le.ru/RREe)  - 14 Мб Mb ZIP  From the author's server through the short link service
 
 The performance was tested on Windows 7-10 | Работоспособность проверялась на Windows 7-10
 
