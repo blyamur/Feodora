@@ -6,6 +6,8 @@ Feodora - Script for resaving images with GUI  V3 (python 3 and tkinter)
 
 ![Light screenshot](https://github.com/blyamur/Feodora/blob/main/ezgif-2-0b191cd9961c.png)
 
+### Version 3.1 (current):
+
 A small development of the script / program, which was laid out [earlier](https://github.com/blyamur/Python-Resaving-Image-with-GUI).
 
 For general convenience and expansion of capabilities, some optional features have been added. For example, now you can select several images at once. Added the ability to compress images by lowering the quality when saving, taking into account the conversion process first into the .BMP format, which itself is quite weighty in volume, and then into the original format, such compression is sometimes necessary.
