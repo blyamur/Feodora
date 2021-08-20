@@ -8,6 +8,7 @@ from tkinter import filedialog
 from tkinter import messagebox
 from PIL import Image, ImageEnhance
 import webbrowser
+import requests
 
 __author__ = "Mons (https://blog.mons.ws)"
 __copyright__ = "Copyright 2021"
@@ -49,7 +50,7 @@ class App(ttk.Frame):
 			justify="center",
 			font=("-size", 15, "-weight", "bold"),
 		)
-		self.label.grid(row=1, column=0, pady=10, columnspan=2, sticky="S")
+		self.label.grid(row=1, column=0,padx=0, pady=25, columnspan=2, sticky="S")
 		self.accentbutton = ttk.Button(
 			self.widgets_frame, text="Select file (s)", style="Accent.TButton",command=open_file
 		)
@@ -76,12 +77,48 @@ class App(ttk.Frame):
 			justify="center",
 			font=("-size", 11, "-weight", "bold"),
 		)
-		self.labels.grid(row=7, column=0, padx=0, pady=20, columnspan=4, sticky="n")
+		self.labels.grid(row=5, column=0, padx=10, pady=11, columnspan=11, sticky="n")
 		#Bottom copyright 2 url button
 		self.UrlButton = ttk.Button(
 			self.widgets_frame, text="© 2021 Mons (blog.mons.ws)", style="Url.TButton",command=openweb
 		)
-		self.UrlButton.grid(row=8, column=0, padx=11, pady=0, columnspan=11, sticky="nsew")
+		self.UrlButton.grid(row=7, column=0, padx=0, pady=0, columnspan=11, sticky="n")
+		self.UrlButton = ttk.Button(
+			self.widgets_frame, text="V:"+currentVersion+" Check Update", style="Url.TButton",command=checkUpdate
+		)
+		self.UrlButton.grid(row=8, column=0, padx=0, pady=0, columnspan=11, sticky="n")
+		
+		
+def checkUpdate(method='Button'):
+	try:
+		# checks for latest version available on GitHub README file
+		github_page = requests.get('https://raw.githubusercontent.com/blyamur/Feodora/main/README.md')
+		github_page_html = str(github_page.content).split()
+		
+		for i in range(0, 12):
+			try:
+				index = github_page_html.index(('3.' + str(i)))
+				version = github_page_html[index]
+				print(version)
+			except ValueError:
+				pass
+			# display popup window if update found
+		if float(version) > float(currentVersion):
+			updateApp(version)
+		else:
+			if method == 'Button':
+				messagebox.showinfo(title='No update found', message=f'No update found.\nLatest version: {version}')
+
+	# do not check for update if offline
+	except requests.exceptions.ConnectionError:
+		if method == 'Button':
+			messagebox.showwarning(title='You are offline', message='You are offline.\nPlease connect to the internet to check for update.')
+		elif method == 'Button':
+			pass
+def updateApp(version):
+	update = messagebox.askyesno(title='Update available', message=f'Version {version} available. Update?')
+	if update:
+		webbrowser.open_new_tab('https://github.com/blyamur/Feodora')
 def open_file():
 	try:
 		file_open = filedialog.askopenfilenames(parent=root,title='Please select an Image', filetypes=[('Image Files', ['.jpeg', '.jpg', '.png'])])
@@ -125,7 +162,8 @@ def open_file():
 	except:
 		messagebox.showerror("Error", " Something went wrong!")
 def openweb():
-	webbrowser. open(url_go, new=new)
+	webbrowser.open_new_tab('https://blog.mons.ws')
+
 if __name__ == "__main__":
 	root = tk.Tk()
 	w = root.winfo_screenwidth()
@@ -134,13 +172,12 @@ if __name__ == "__main__":
 	h = h//2 
 	w = w - 200
 	h = h - 200
-	root.geometry('520x250+{}+{}'.format(w, h)) #window dimensions
+	root.geometry('570x300+{}+{}'.format(w, h)) #window dimensions
 	root.resizable(False, False)
 	root.title("Feodora: Script for resaving images3.1") #application window title
 	root.iconbitmap('icon.ico') #application window icon
 	factor = 1.8 #image enhancement factor
-	new = 1
-	url_go = "https://blog.mons.ws"
+	currentVersion = '3.1'
 	root.tk.call("source", "spring-noon.tcl") #setting the theme
 	root.tk.call("set_theme", "light") #theme style
 	app = App(root)
