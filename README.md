@@ -10,15 +10,6 @@ Feodora - Script for resaving images with GUI  V3 (python 3 and tkinter)
 
 A small development of the script / program, which was laid out [earlier](https://github.com/blyamur/Python-Resaving-Image-with-GUI).
 
-For general convenience and expansion of capabilities, some optional features have been added. For example, now you can select several images at once. Added the ability to compress images by lowering the quality when saving, taking into account the conversion process first into the .BMP format, which itself is quite weighty in volume, and then into the original format, such compression is sometimes necessary.
-
-Also added the ability to enable or disable image enhancement by increasing contrast and sharpness. Well, in order not to produce a bunch of files, you can now enable overwriting of originals with new files. And the names of new files are now without random symbols, but with the addition of the work done, if compression was added "compressed", if improved "enhance". Well, what is not unimportant, the interface has become somewhat more modern. A general list of features will be below.
-
-
-> Небольшое развитие скрипта\программы, который выкладывался ранее.
-> Для общего удобства и расширения возможностей добавлены некоторые опциональные возможности. Например теперь можно выбрать сразу несколько изображений сразу. Добавлена возможность сжатия изображений за счет понижения качества при сохранении, учитывая процесс конвертации сначала в формат .BMP, который сам по себе довольно весомый по объему, а потом уже в исходный формат, такое сжатие бывает необходимо.
-> Так же добавлена возможность включать или выключать улучшение изображения, за счет повышения контрастности и резкости. Ну и чтобы не плодить кучу файлов, теперь можно включить перезапись оригиналов новыми файлами. А названия новых файлов теперь без рандомным символов, но с добавлением проделанной работы, если было сжатие будет добавлено «compressed«, если улучшено «enhance«. Ну что не маловажно, интерфейс стал несколько более современным. Общий список возможностей будет ниже.
-
 
 Simple to use. We turned on the options we needed, pressed the image selection button, selected all those images that need to be saved and are waiting for the end of the work. The finished images are in the same place as the originals.
 > Пользоваться просто. Включили нужные нам опции, нажали кнопку выбора изображений, выбрали все те изображения, которые необходимо пересохранить и ждем окончания работы. Готовые изображения там же, где и оригиналы. 
