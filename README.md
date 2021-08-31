@@ -89,7 +89,8 @@ Not for commercial use.
 ### Did you find this useful?!
 > Вы нашли это  полезным ?!
 
-Happy to hear that :) *If You want to help me, you can buy me a cup of cup of coffee ( [yoomoney](https://yoomoney.ru/to/41001158104834) or [PayPal](https://paypal.me/enkonu) )*
+Happy to hear that :) *If You want to help me, you can buy me a cup of cup of coffee ( [yoomoney](https://yoomoney.ru/to/41001158104834) or [PayPal](https://paypal.me/enkonu) [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/W7W460SQ3) )*
+
 
 > Рад это слышать :) Если вы хотите мне помочь, вы можете угостить меня чашкой кофе
 
