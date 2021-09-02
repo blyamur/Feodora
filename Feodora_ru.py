@@ -150,10 +150,10 @@ def open_file():
 					if delete_im.get() == 1:
 						os.remove(file_dir + '/' + full_name) #удаляется оригинал изображения
 						imgs.save(file_dir + '/' + full_name, quality=quality_im_set) #изображение сохраняется в формате оригинала 
-						os.remove(file_dir + '/' + nenhance + nquality + new_name + nenhance + nquality + '.bmp')  #удаляется изображение  в формате bmp
+						os.remove(file_dir + '/' + nenhance + nquality + new_name +'.bmp')  #удаляется изображение  в формате bmp
 					else:
 						imgs.save(file_dir + '/' + nenhance + nquality + new_name + ext_name, quality=quality_im_set)  #изображение сохраняется в формате оригинала
-						os.remove(file_dir + '/' + nenhance + nquality + new_name + '.bmp') #удаляется изображение  в формате bmp
+						os.remove(file_dir + '/' + nenhance + nquality + new_name +'.bmp') #удаляется изображение  в формате bmp
 					status.set('Готово, мы все успешно пересохранили!')
 				except:
 					messagebox.showerror(title='Ошибка', message='Ой, Что-то пошло не так!', icon='warning')
