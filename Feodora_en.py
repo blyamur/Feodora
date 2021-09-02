@@ -149,10 +149,10 @@ def open_file():
 					if delete_im.get() == 1:
 						os.remove(file_dir + '/' + full_name) #original image is deleted
 						imgs.save(file_dir + '/' + full_name, quality=quality_im_set) #image is saved in the original format
-						os.remove(file_dir + '/' + nenhance + nquality + new_name + nenhance + nquality + '.bmp')  #deletes the bmp image
+						os.remove(file_dir + '/' + nenhance + nquality + new_name +'.bmp')  #deletes the bmp image
 					else:
 						imgs.save(file_dir + '/' + nenhance + nquality + new_name + ext_name, quality=quality_im_set)  #image is saved in the original format
-						os.remove(file_dir + '/' + nenhance + nquality + new_name + '.bmp') #deletes the bmp image
+						os.remove(file_dir + '/' + nenhance + nquality + new_name +'.bmp') #deletes the bmp image
 					status.set('Done, we saved everything successfully!')
 				except:
 					messagebox.showerror(title='Error', message='Oops, Something went wrong!', icon='warning')
