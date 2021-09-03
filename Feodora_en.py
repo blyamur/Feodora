@@ -9,6 +9,7 @@ from tkinter import messagebox
 from PIL import Image, ImageEnhance
 import webbrowser
 import requests
+import time
 
 __author__ = "Mons (https://blog.mons.ws)"
 __copyright__ = "Copyright 2021"
@@ -94,7 +95,6 @@ def checkUpdate(method='Button'):
 		# checks for latest version available on GitHub README file
 		github_page = requests.get('https://raw.githubusercontent.com/blyamur/Feodora/main/README.md')
 		github_page_html = str(github_page.content).split()
-		
 		for i in range(0, 12):
 			try:
 				index = github_page_html.index(('3.' + str(i)))
@@ -127,7 +127,8 @@ def open_file():
 			status.set(full_name)
 			file_dir = os.path.dirname(os.path.abspath(filename)) #source folder path
 			dir_name = path.splitext(full_name)[0] #image name
-			new_name = 'RSD_'+dir_name #new name
+			nwsec = round(time.time())
+			new_name = str(nwsec) + dir_name + '_' #новое название
 			ext_name = path.splitext(full_name)[1] #extension 
 			if ext_name.lower().endswith(('.jpeg', '.jpg', '.png')):
 				try:
@@ -144,18 +145,20 @@ def open_file():
 					else:
 						quality_im_set=99
 						nquality=''
-					img.save(file_dir + '/' + nenhance + nquality + new_name +'.bmp') #image is saved in bmp format
-					imgs = Image.open(file_dir + '/'  + nenhance + nquality + new_name + '.bmp') #image opens in bmp format
+
+					img.save(file_dir + '/'+new_name + nenhance + nquality+'.bmp') #image is saved in bmp format
+					imgs = Image.open(file_dir + '/'+new_name + nenhance + nquality+'.bmp') #image opens in bmp format
 					if delete_im.get() == 1:
-						os.remove(file_dir + '/' + full_name) #original image is deleted
-						imgs.save(file_dir + '/' + full_name, quality=quality_im_set) #image is saved in the original format
-						os.remove(file_dir + '/' + nenhance + nquality + new_name +'.bmp')  #deletes the bmp image
+						os.remove(os.path.join(file_dir + '/' + full_name)) #original image is deleted
+						imgs.save(file_dir + '/'+full_name, quality=quality_im_set)#image is saved in the original format
+						os.remove(os.path.join(file_dir + '/'+new_name + nenhance + nquality+'.bmp')) #deletes the bmp image
 					else:
-						imgs.save(file_dir + '/' + nenhance + nquality + new_name + ext_name, quality=quality_im_set)  #image is saved in the original format
-						os.remove(file_dir + '/' + nenhance + nquality + new_name +'.bmp') #deletes the bmp image
+						imgs.save(file_dir + '/'+new_name + nenhance + nquality+ext_name, quality=quality_im_set)   #image is saved in the original format
+						os.remove(os.path.join(file_dir + '/'+new_name + nenhance + nquality+'.bmp')) #deletes the bmp image
 					status.set('Done, we saved everything successfully!')
 				except:
-					messagebox.showerror(title='Error', message='Oops, Something went wrong!', icon='warning')
+					messagebox.showerror(title='Ошибка', message='Oops, Something went wrong!', icon='warning')
+					os.remove(os.path.join(file_dir + '/'+new_name + nenhance + nquality+'.bmp'))
 			else:
 				messagebox.showerror("Error", " You haven't selected a file!")
 	except:
