@@ -9,6 +9,7 @@ from tkinter import messagebox
 from PIL import Image, ImageEnhance
 import webbrowser
 import requests
+import time
 
 __author__ = "Mons (https://blog.mons.ws)"
 __copyright__ = "Copyright 2021"
@@ -128,7 +129,8 @@ def open_file():
 			status.set(full_name)
 			file_dir = os.path.dirname(os.path.abspath(filename)) #путь к папке источнику
 			dir_name = path.splitext(full_name)[0] #название изображения
-			new_name = 'RSD_'+dir_name #новое название
+			nwsec = round(time.time())
+			new_name = str(nwsec) + dir_name + '_' #новое название
 			ext_name = path.splitext(full_name)[1] #расширение 
 			if ext_name.lower().endswith(('.jpeg', '.jpg', '.png')):
 				try:
@@ -136,27 +138,29 @@ def open_file():
 					if enhance_im.get() == 1: 
 						enhancer = ImageEnhance.Sharpness(img)
 						img = enhancer.enhance(factor)
-						nenhance = 'enhance_'
+						nenhance = '_enhance'
 					else:
 						nenhance = ''
 					if quality_im.get() == 1: 
 						quality_im_set=70 # степень сжатия качества
-						nquality='compressed_'
+						nquality='_compressed'
 					else:
 						quality_im_set=99
 						nquality=''
-					img.save(file_dir + '/' + nenhance + nquality + new_name +'.bmp') #изображение сохраняется в формате bmp
-					imgs = Image.open(file_dir + '/'  + nenhance + nquality + new_name + '.bmp') #изображение открывается в формате bmp
+					
+					img.save(file_dir + '/'+new_name + nenhance + nquality+'.bmp') #изображение сохраняется в формате bmp
+					imgs = Image.open(file_dir + '/'+new_name + nenhance + nquality+'.bmp') #изображение открывается в формате bmp
 					if delete_im.get() == 1:
-						os.remove(file_dir + '/' + full_name) #удаляется оригинал изображения
-						imgs.save(file_dir + '/' + full_name, quality=quality_im_set) #изображение сохраняется в формате оригинала 
-						os.remove(file_dir + '/' + nenhance + nquality + new_name +'.bmp')  #удаляется изображение  в формате bmp
+						os.remove(os.path.join(file_dir + '/' + full_name))
+						imgs.save(file_dir + '/'+full_name, quality=quality_im_set) #изображение сохраняется в формате оригинала
+						os.remove(os.path.join(file_dir + '/'+new_name + nenhance + nquality+'.bmp')) #удаляется изображение  в формате bmp
 					else:
-						imgs.save(file_dir + '/' + nenhance + nquality + new_name + ext_name, quality=quality_im_set)  #изображение сохраняется в формате оригинала
-						os.remove(file_dir + '/' + nenhance + nquality + new_name +'.bmp') #удаляется изображение  в формате bmp
+						imgs.save(file_dir + '/'+new_name + nenhance + nquality+ext_name, quality=quality_im_set)  #изображение сохраняется в формате оригинала
+						os.remove(os.path.join(file_dir + '/'+new_name + nenhance + nquality+'.bmp')) #удаляется изображение  в формате bmp
 					status.set('Готово, мы все успешно пересохранили!')
 				except:
 					messagebox.showerror(title='Ошибка', message='Ой, Что-то пошло не так!', icon='warning')
+					os.remove(os.path.join(file_dir + '/'+new_name + nenhance + nquality+'.bmp'))
 			else:
 				messagebox.showerror("Ошибка", " Вы не выбрали файл!")
 	except:
