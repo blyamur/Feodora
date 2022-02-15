@@ -79,7 +79,7 @@ The performance was tested on Windows 7-10 | Работоспособность 
 ### Copyrights and Licenses
 Not for commercial use.
 
-© 2021  [Mons](https://blog.mons.ws)
+© 2022  [Mons](https://blog.mons.ws)
 
 ### Special thanks
 > Отдельная благодарность  
