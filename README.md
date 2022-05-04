@@ -44,14 +44,6 @@ You need to download the version of the script you need, the icon, the theme fil
 pyinstaller Feodora_ru.py --noconsole --onefile --icon=icon.ico
 ```
 
-#### Download programs in EXE | Скачать программы в EXE 
-
-[Feodora__RU](https://3le.ru/aNQkwO)  - 14 Mb ZIP  From the author's server through the short link service
-
-[Feodora_EN](https://3le.ru/RREe)  - 14 Мб Mb ZIP  From the author's server through the short link service
-
-The performance was tested on Windows 7-10 | Работоспособность проверялась на Windows 7-10
-
 
 #### What's new in version 3.1  | Что нового в версии 3.1
 
