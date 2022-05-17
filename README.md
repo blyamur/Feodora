@@ -44,7 +44,7 @@ You need to download the version of the script you need, the icon, the theme fil
 pyinstaller Feodora_ru.py --noconsole --onefile --icon=icon.ico
 ```
 
-***Или вы можете воспользоваться графическим интерфейсом для Pyinstaller [GUI-Pyinstaller-Pichuga](https://github.com/blyamur/GUI-Pyinstaller-Pichuga)
+***Или вы можете воспользоваться графическим интерфейсом для Pyinstaller*** ***[GUI-Pyinstaller-Pichuga](https://github.com/blyamur/GUI-Pyinstaller-Pichuga)***
 
 
 
